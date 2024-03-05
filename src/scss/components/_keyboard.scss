@@ -1,0 +1,35 @@
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@mixin centerVertically {
+    --size: 1rem;
+    height: var(--size);
+    line-height: var(--size);
+}
+
+.key {
+    @include centerVertically;
+    --size: 4.5rem;
+    min-width: var(--size);
+    min-height: var(--size);
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    &_primary {
+        background-color: var(--btn_primary);
+    }
+
+    &_secondary {
+        background-color: var(--btn_secondary);
+    }
+
+    &_blue {
+        color: white;
+        background-color: var(--btn_blue);
+    }
+}

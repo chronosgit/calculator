@@ -1,0 +1,18 @@
+//- Order of these MATTERS
+-
+    keys = [
+        "C", "+/-", "%", "÷",
+        "7", "8", "9", "x",
+        "4", "5", "6", "-",
+        "1", "2", "3", "+",
+        ".", "0", "⌫", "="
+    ]
+
+.keyboard
+    each key, index in keys 
+        if index + 1 < 4
+            .key.key_secondary #{key}
+        else if (index + 1) % 4 == 0
+            .key.key_blue!= key 
+        else 
+            .key.key_primary #{key}
