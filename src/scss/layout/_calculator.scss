@@ -1,9 +1,18 @@
-.calculator {
-    // Push from top of a screen
+@mixin resizable {
+    resize: both;
+    overflow:auto;
+}
+
+// Push from top of a screen
+@mixin pushFromTop {
     margin-top: 2rem;
+}
+
+.calculator {
+    @include resizable;
+    @include pushFromTop;
 
     padding: 3rem 1rem;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
