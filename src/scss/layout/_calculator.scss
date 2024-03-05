@@ -1,0 +1,12 @@
+.calculator {
+    // Push from top of a screen
+    margin-top: 2rem;
+
+    padding: 3rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--bg);   
+}

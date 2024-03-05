@@ -1,0 +1,37 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@mixin override_base {
+    border: none;
+}
+
+.theme_switch {
+    @include override_base;
+    @include flex;
+    position: relative;
+    width: 4.5rem;
+    height: 2rem;
+    background-color: var(--theme_switch_bg);
+    border-radius: 1rem;
+
+    &_sun,
+    &_moon,
+    &_cover {
+        border-radius: 50%;
+    }
+
+    &_cover {
+        --size: 1.5rem;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        right: 0;
+        background-color: var(--theme_switch_cover);
+        transform: translateX(var(--theme_switch_cover_offset));   
+        transition: transform 0.4s ease, background-color 0.05s ease;
+    }
+}
