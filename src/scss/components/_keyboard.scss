@@ -1,22 +1,22 @@
 .keyboard {
+    height: 75%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
-@mixin centerVertically {
-    --size: 1rem;
-    height: var(--size);
-    line-height: var(--size);
-}
-
 .key {
-    @include centerVertically;
     --size: 4.5rem;
     min-width: var(--size);
     min-height: var(--size);
-    font-size: 2rem;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
+    font-size: 3rem;
     border-radius: 1rem;
     cursor: pointer;
 

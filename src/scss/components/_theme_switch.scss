@@ -1,4 +1,4 @@
-@mixin flex {
+@mixin theme_switch_flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -11,7 +11,7 @@
 
 .theme_switch {
     @include override_base;
-    @include flex;
+    @include theme_switch_flex;
     position: relative;
     margin-bottom: 3rem;
     width: 4.5rem;

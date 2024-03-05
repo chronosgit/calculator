@@ -1,3 +1,7 @@
 .main_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 25%;
     margin-bottom: 2rem; 
 }
