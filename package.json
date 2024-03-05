@@ -1,4 +1,8 @@
 {
+  "name": "calculator",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "/src/js/app.js",
   "dependencies": {
     "pug": "^3.0.2"
   }
