@@ -5,6 +5,10 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-image: url("/src/assets/images/bg_desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 :root {

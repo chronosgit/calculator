@@ -2,12 +2,12 @@
     text-align: right;
 
     &_operation {
-        font-size: 2.5rem;
+        font-size: calc(1.5rem + 1vw);
         color: var(--main_secondary);
     }
 
     &_result {
-        font-size: 6rem;
+        font-size: calc(4rem + 2vw);
         color: var(--main);
     }
 }
