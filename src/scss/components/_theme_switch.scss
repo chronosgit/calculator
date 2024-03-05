@@ -13,6 +13,7 @@
     @include override_base;
     @include flex;
     position: relative;
+    margin-bottom: 3rem;
     width: 4.5rem;
     height: 2rem;
     background-color: var(--theme_switch_bg);

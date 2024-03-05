@@ -8,14 +8,17 @@
     margin-top: 2rem;
 }
 
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
 .calculator {
     @include resizable;
     @include pushFromTop;
+    @include grid;
 
     padding: 3rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--bg);   
+    background-color: var(--bg);
 }
