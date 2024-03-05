@@ -1,0 +1,13 @@
+.numbers_box {
+    text-align: right;
+
+    &_operation {
+        font-size: calc(1.5rem + 1vw);
+        color: var(--main_secondary);
+    }
+
+    &_result {
+        font-size: calc(4rem + 2vw);
+        color: var(--main);
+    }
+}

@@ -1,0 +1,21 @@
+@mixin resizable {
+    resize: both;
+    overflow: auto;
+}
+
+@mixin calculator_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    justify-items: center;
+}
+
+.calculator {
+    @include resizable;
+    @include calculator_grid;
+    
+    height: 100%;
+    padding: 3rem 1rem;
+    background-color: var(--bg);
+    border-radius: 1rem;
+}
