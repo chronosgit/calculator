@@ -15,11 +15,10 @@ body {
     --gray_100: #F1F2F3;
     --blue_400: #4b5efc;
 
-    --theme_switch_cover_offset: -0.25rem;
-
     // Light theme
     --theme_switch_bg: white;
     --theme_switch_cover: var(--gray_300);
+    --theme_switch_cover_offset: -0.25rem;
     --bg: var(--gray_100);
     --main: black;
     --main_secondary: var(--gray_400);

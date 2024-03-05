@@ -33,6 +33,6 @@
         right: 0;
         background-color: var(--theme_switch_cover);
         transform: translateX(var(--theme_switch_cover_offset));   
-        transition: transform 0.4s ease, background-color 0.05s ease;
+        transition: transform 0.2s ease, background-color 0.05s ease;
     }
 }

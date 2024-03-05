@@ -3,7 +3,7 @@
     overflow: auto;
 }
 
-@mixin grid {
+@mixin calculator_grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
@@ -12,7 +12,7 @@
 
 .calculator {
     @include resizable;
-    @include grid;
+    @include calculator_grid;
     
     height: 100%;
     padding: 3rem 1rem;
