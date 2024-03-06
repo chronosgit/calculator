@@ -1,5 +1,9 @@
 .numbers_box {
+    width: 100%;
+    resize: both;
     text-align: right;
+    text-overflow: ellipsis;
+    overflow: scroll;
 
     &_operation {
         font-size: calc(1.5rem + 1vw);
