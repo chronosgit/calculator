@@ -9,6 +9,7 @@ let firstNumber = "0";
 let secondNumber = "";
 let operation = "";
 let didTypeSecondNumber = false;
+let finishedOperation = false;
 
 const primaryDisplay = document.querySelector(".numbers_box_result");
 const secondaryDisplay = document.querySelector(".numbers_box_operation");
@@ -27,7 +28,14 @@ const clearEverything = () => {
 
 const resolveNumber = (n) => {
     if(operation === "") {
-        firstNumber = removeTrailingZeros(firstNumber + n);
+        secondaryDisplay.textContent = "";
+
+        if(!finishedOperation) {
+            firstNumber = removeTrailingZeros(firstNumber + n);
+        } else {
+            finishedOperation = true;
+            firstNumber = removeTrailingZeros(n);
+        }
 
         primaryDisplay.textContent = firstNumber;
     } else {
@@ -35,6 +43,7 @@ const resolveNumber = (n) => {
             secondNumber = removeTrailingZeros(secondNumber + n);
         } else {
             didTypeSecondNumber = true;
+            secondaryDisplay.textContent = firstNumber + " " + operation;
             secondNumber = removeTrailingZeros(n);
         }
 
@@ -83,12 +92,53 @@ const resolveOperation = (op) => {
 
     secondaryDisplay.classList.remove("hidden");
     secondaryDisplay.textContent = firstNumber + " " + operation;
-
-    console.log(firstNumber, secondNumber)
 };
 
 const makeResult = () => {
+    if(secondNumber === "" || operation === "") return;
 
+    const a = parseInt(firstNumber);
+    const b = parseInt(secondNumber);
+    let result = "";
+
+    secondaryDisplay.textContent = `${firstNumber} ${operation} ${secondNumber} =`;
+
+    switch(operation) {
+        case "%":
+            result = a % b;
+            
+            break;
+        case "÷":
+            if(secondNumber === "0") {
+                result = "Division by zero is impossible";
+            } else {
+                result = a / b;
+            }
+
+            break;
+        case "x":
+            result = a * b;
+
+            break;
+        case "-":
+            result = a - b;
+
+            break;
+        case "+":
+            result = a + b;
+
+            break;
+        default:
+            console.log("Invalid operation");
+    }
+
+    operation = "";
+    firstNumber = result;
+    secondNumber = "";
+    didTypeSecondNumber = false;
+    finishedOperation = true;
+
+    primaryDisplay.textContent = result;
 };
 
 // Main
